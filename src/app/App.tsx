@@ -1,4 +1,4 @@
-import { Todos } from "../component/Todos/index.tsx";
+import { Todos } from "../component/Todos/";
 import "./App.module.scss";
 
 function App() {

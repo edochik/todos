@@ -5,7 +5,7 @@ interface TodoFilterProps {
   setFilter: (arg: Filter) => void;
 }
 
-const filters = ["All", "Active", "Completed"];
+export const filters = ["All", "Active", "Completed"];
 
 const TodoFilter = ({ setFilter }: TodoFilterProps) => {
   return (
