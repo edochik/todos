@@ -4,7 +4,7 @@ import { Input } from "../Input/";
 import { Todo } from "../Todo/";
 import { TodoFilter } from "../TodoFilter/";
 import { initialTodos } from "../../data/initialTodos.ts";
-import { getFilterTodos } from "./getFilterTodos.ts";
+import { filterTodos } from "./filterTodos.ts";
 import { ITodo } from "../../domain/interface/ITodo.ts";
 import { Filter } from "../../domain/types/Filter.ts";
 
@@ -51,7 +51,7 @@ const Todos = () => {
       <h1 className={s.title}>todos</h1>
       <Input value={inputValue} onChange={setInputValue} />
       <ul className={s.list}>
-        {getFilterTodos[filter]?.(todos).map((todo) => (
+        {filterTodos[filter]?.(todos).map((todo) => (
           <li className={s.item} key={todo.id}>
             <Todo {...todo} onChange={handleCheckboxChange} />
           </li>
