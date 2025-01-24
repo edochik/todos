@@ -1,0 +1,56 @@
+@use '../../style/mixin.scss' as mix;
+.Todo {
+	padding: 10px 0 10px 10px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	cursor: pointer;
+	border-bottom: 1px solid lightgray;
+	.input {
+		@include mix.hide-input();
+	}
+	.input:checked + .checkbox + .name {
+		color: lightgray;
+		text-decoration: line-through;
+		transition:
+			color 0.3s ease,
+			text-decoration 0.3s ease;
+	}
+	.checkbox {
+		position: relative;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background-color: white;
+		border: 1px solid gray;
+		border-radius: 50%;
+	}
+	.checkbox:before,
+	.checkbox:after {
+		position: absolute;
+		content: '';
+		background-color: gray;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	.checkbox:before {
+		width: 17px;
+		height: 2px;
+		left: 9px;
+		top: 14px;
+		transform: rotate(-65deg);
+	}
+	.checkbox:after {
+		width: 10px;
+		height: 2px;
+		left: 6px;
+		top: 18px;
+		transform: rotate(45deg);
+	}
+	.input:checked + .checkbox:after,
+	.input:checked + .checkbox::before {
+		opacity: 1;
+	}
+}

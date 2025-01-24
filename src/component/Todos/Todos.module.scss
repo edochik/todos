@@ -1,0 +1,32 @@
+@use '../../style/mixin.scss' as mix;
+
+.Todos {
+	padding: 25px;
+	background-color: lightgray;
+	width: 600px;
+	.title {
+		text-align: center;
+		color: gray;
+		font-size: 72px;
+		font-weight: 400;
+		margin: 0;
+	}
+	.list {
+		@include mix.list-reset();
+		font-size: 36px;
+	}
+	.wrapper {
+		padding: 0 15px;
+		background-color: white;
+		color: gray;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.button {
+		border: none;
+		color: inherit;
+		background-color: inherit;
+		cursor: pointer;
+	}
+}
