@@ -1,11 +1,10 @@
 import { Filter } from "../../domain/types/Filter.ts";
+import { filters } from "./filters.ts";
 import s from "./TodoFilter.module.scss";
 
 interface TodoFilterProps {
   setFilter: (arg: Filter) => void;
 }
-
-export const filters = ["All", "Active", "Completed"];
 
 const TodoFilter = ({ setFilter }: TodoFilterProps) => {
   return (

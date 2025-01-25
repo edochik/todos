@@ -3,7 +3,6 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 describe("Todo component test", () => {
-
   test("user adds a todo and presses Enter", async () => {
     const user = userEvent.setup();
     render(<Todos />);
@@ -14,7 +13,14 @@ describe("Todo component test", () => {
     const countTodos = screen.getAllByRole("checkbox").length;
     expect(countTodos).toBe(4);
   });
-
+  test("user can`t add empty todo", async () => {
+    const user = userEvent.setup();
+    render(<Todos />);
+    const input = screen.getByRole("textbox");
+    await user.type(input, "{Enter}");
+    const countTodos = screen.getAllByRole("checkbox").length;
+    expect(countTodos).toBe(3);
+  });
   test("user marks a todo as completed", async () => {
     const user = userEvent.setup();
     render(<Todos />);

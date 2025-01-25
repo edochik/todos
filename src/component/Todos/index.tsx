@@ -59,7 +59,7 @@ const Todos = () => {
       </ul>
       <div className={s.wrapper}>
         <p className={s.info}>
-          {tasksToDo} {tasksToDo === 1 ? "item " : "items"} left
+          {tasksToDo} {tasksToDo === 1 ? "item" : "items"} left
         </p>
         <TodoFilter setFilter={setFilter} />
         <button className={s.button} onClick={() => onClickClearCompleted()}>
