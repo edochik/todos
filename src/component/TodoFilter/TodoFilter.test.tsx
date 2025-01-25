@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import { filters, TodoFilter } from "./";
+import { TodoFilter } from "./";
+import { filters } from "./filters.ts";
 
 describe("TodoFilter component test", () => {
   test("component has arguments", () => {
