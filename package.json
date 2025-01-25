@@ -10,7 +10,7 @@
     "test": "vitest",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@types/jest": "^29.5.14",
