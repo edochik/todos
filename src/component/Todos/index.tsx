@@ -12,7 +12,7 @@ const Todos = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [todos, setTodos] = useState<ITodo[]>(initialTodos);
   const [filter, setFilter] = useState<Filter>("All");
-  const tasksToDo: number = todos.filter((todo) => !todo.completed).length;
+  const tasksToDo: number = filterTodos[filter]?.(todos).length;
 
   const handleCheckboxChange = (id: string) => {
     setTodos((prev) =>
