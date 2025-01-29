@@ -16,7 +16,6 @@
 - **React** (с использованием React Hooks)
 - **Jest** для тестирования
 - **React Testing Library** для юнит-тестов
-- **styled-components** или другие библиотеки для стилей (в зависимости от выбора)
 
 ## Как запустить проект
 
@@ -25,7 +24,7 @@
    Сначала клонируйте репозиторий на свой локальный компьютер:
 
    ```bash
-   git clone https://github.com/ваш-репозиторий/todo-app.git
+   git clone https://github.com/edochik/todos.git
    ```
 
 2. **Установите зависимости**
